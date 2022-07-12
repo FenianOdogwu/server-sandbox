@@ -9,10 +9,15 @@ const db = mongoose.connection;
 db.on('error', (error) => console.error(error));
 db.once('open', () => console.log('Connected to Database'));
 
-
+//Middleware
 app.use(express.json())
 
 //ROUTES
+app.get('/', (req, res) => {
+    res.send('Home');
+})
+
+
 const usersRouter = require('./routes/users');
 app.use('/users' , usersRouter) // url will use 'localhost:3000/users/'
 

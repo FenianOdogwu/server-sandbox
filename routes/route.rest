@@ -2,7 +2,7 @@ GET http://localhost:3000/users
 
 ###
 
-GET http://localhost:3000/users/97
+GET http://localhost:3000/users/62daa83c9467b146c0adaa5f
 
 
 
@@ -11,12 +11,21 @@ POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-    "name": "Rasen",
+    "name": "Rasen2",
     "posts": 24
 }
 
 
 ###
-DELETE http://localhost:3000/users/
+DELETE http://localhost:3000/users/62db15e7c7fc966adbefc82c
 Content-Type: application/json
 
+
+
+###
+PATCH  http://localhost:3000/users/62daa83c9467b146c0adaa5f
+Content-Type: application/json
+
+{
+    "name" : "Neo-Rasen IV"
+}

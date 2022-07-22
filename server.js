@@ -12,10 +12,6 @@ db.once('open', () => console.log('Connected to Database'));
 //Middleware
 app.use(express.json())
 
-//ROUTES
-app.get('/', (req, res) => {
-    res.send('Home');
-})
 
 
 const usersRouter = require('./routes/users');
